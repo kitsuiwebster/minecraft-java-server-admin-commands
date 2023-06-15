@@ -203,11 +203,13 @@ Here's the exhaustive list of all commands that can be used by the administrator
 - Play a sound to a player:
 
     ```java
-    playsound <sound> <player> [<x> <y> <z>] [<volume>] [<pitch>] [<minimumVolume>]
+    playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch>]<minimumVolume>
     ```
 
 - Manage scoreboard objectives and players:
 
    ```java
-    scoreboard
+   scoreboard objectives add <objective name> dummy <display-name>
+   scoreboard objectives list
+
    ```
