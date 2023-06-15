@@ -203,7 +203,7 @@ Here's the exhaustive list of all commands that can be used by the administrator
 ## Play a sound to a player
 
 ```java
-playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch>]<minimumVolume>
+playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch> <minimumVolume>
 ```
 
 In the context of the Minecraft `playsound` command, the `master` refers to the source channel of the sound being played.
