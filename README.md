@@ -1,4 +1,4 @@
-# **Minecraft Server - Java Edition - All Administrator Commands**
+# **Minecraft Server - Java Edition - All Administrator Commands (WIP)**
 
 Here's the exhaustive list of all commands that can be used by the administrator of a Minecraft Server - Java Edition:
 
