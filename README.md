@@ -200,16 +200,34 @@ Here's the exhaustive list of all commands that can be used by the administrator
     defaultgamemode survival/creative/spectator/adventure
     ```
 
-- Play a sound to a player:
+## Play a sound to a player
 
-    ```java
-    playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch>]<minimumVolume>
-    ```
+```java
+playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch>]<minimumVolume>
+```
 
-- Manage scoreboard objectives and players:
+In the context of the Minecraft `playsound` command, the `master` refers to the source channel of the sound being played.
 
-   ```java
-   scoreboard objectives add <objective name> dummy <display-name>
-   scoreboard objectives list
+Minecraft has various sound categories or "channels" that allow for more fine-tuned control over in-game audio settings. These categories can be individually adjusted by the player, meaning a player can make certain types of sounds louder or softer independent of other sounds.
 
-   ```
+Here are the main sound categories:
+
+1. `master`: This is the main volume controller. All sounds in the game fall under this category.
+2. `music`: This category is for the background music that plays while in the game.
+3. `record`: This is for music disc sounds.
+4. `weather`: This is for weather-related sounds (e.g., rain, thunder, etc.).
+5. `block`: This is for sounds related to blocks (e.g., placing, breaking, stepping on blocks).
+6. `hostile`: This is for sounds made by hostile creatures.
+7. `neutral`: This is for sounds made by neutral creatures.
+8. `player`: This is for sounds made by the player (e.g., damage, burp, etc.).
+9. `ambient`: This is for ambient/environmental sounds.
+10. `voice`: This is for any in-game voice output.
+
+When you're using the `playsound` command and specify `master` as the source, the sound will play on the 'Master' channel, which means it is not categorized under any specific in-game sound like blocks, creatures, weather, etc. Instead, it plays as a general game sound that is controlled by the master volume setting in the game.
+
+## Manage scoreboard objectives and players:
+
+```java
+scoreboard objectives add <objective name> dummy <display-name>
+scoreboard objectives list
+```
