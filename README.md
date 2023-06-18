@@ -136,64 +136,58 @@ save-off
 save-on
 ```
 
-- Enable automatic saving:
+## List all currently connected players
 
-    ```java
-    save-on
-    ```
+```java
+list
+```
 
-- List all currently connected players:
+## Reload the server configuration file
 
-    ```java
-    list
-    ```
+```java
+reload
+```
 
-- Reload the server configuration file:
+## Set the game difficulty
 
-    ```java
-    reload
-    ```
+```java
+difficulty peaceful/easy/normal/hard
+```
 
-- Set the game difficulty:
+## Clear all status effects from a player
 
-    ```java
-    difficulty peaceful/easy/normal/hard
-    ```
+```java
+effect <player> clear
+```
 
-- Clear all status effects from a player:
+## Apply a status effect to a player for a given duration and potency
 
-    ```java
-    effect <player> clear
-    ```
+```java
+effect <player> <effect> [seconds] [amplifier] [hideParticles]
+```
 
-- Apply a status effect to a player for a given duration and potency:
+## Display the world seed
 
-    ```java
-    effect <player> <effect> [seconds] [amplifier] [hideParticles]
-    ```
+```java
+seed
+```
 
-- Display the world seed:
+## Set the world spawn
 
-    ```java
-    seed
-    ```
+```java
+setworldspawn [<x> <y> <z>]
+```
 
-- Set the world spawn:
+## Set the default game mode
 
-    ```java
-    setworldspawn [<x> <y> <z>]
-    ```
-
-- Set the default game mode:
-
-    ```java
-    defaultgamemode survival/creative/spectator/adventure
-    ```
+```java
+defaultgamemode survival/creative/spectator/adventure
+```
 
 ## Play a sound to a player
 
 ```java
-playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch> <minimumVolume>
+playsound <sound> <player> <source> [<x> <y> <z>] <volume> <pitch> <minimumVolume>
 ```
 
 ### Syntax
@@ -227,7 +221,7 @@ Here are the main sound categories (sources):
 
 When you're using the `playsound` command and specify `master` as the source, the sound will play on the 'Master' channel, which means it is not categorized under any specific in-game sound like blocks, creatures, weather, etc. Instead, it plays as a general game sound that is controlled by the master volume setting in the game.
 
-## Manage scoreboard objectives and players:
+## Manage scoreboard objectives and players
 
 ```java
 scoreboard objectives add <objective name> dummy <display-name>
