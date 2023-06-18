@@ -2,89 +2,79 @@
 
 Here's the exhaustive list of all commands that can be used by the administrator of a Minecraft Server - Java Edition:
 
-- Grant a player operator status:
+## Grant and revoke a player operator status:
 
-    ```java
-    op <player>
-    ```
+```java
+op <player>
+deop <player>
+```
 
-- Revoke a player's operator status:
+### Player Parameter
 
-    ```java
-    deop <player>
-    ```
+`<player>` is the username of the player to whom you want to grant or revoke operator status.
 
-- Ban a specific player:
+## Ban and unban a specific player:
 
-    ```java
-    ban <player>
-    ```
+```java
+ban <player>
+pardon <player>
+```
 
-- Unban a specific player:
+`<player>` is the username of the player that you want to ban or unban.
 
-    ```java
-    unban <player>
-    ```
+## Ban or unban a specific IP address:
 
-- Ban a specific IP address:
+```java
+ban-ip <address>
+pardon-ip <address>
+```
 
-    ```java
-    ban-ip <address>
-    ```
+`<address>` is the address of the player that you want to ban or unban.
 
-- Unban a specific IP address:
+## Add or remove a player to/from the whitelist:
 
-    ```java
-    unban-ip <address>
-    ```
+```java
+whitelist add <player>
+whitelist remove <player>
+```
 
-- Add a player to the whitelist:
+`<player>` is the username of the player that you to add to/from the whitelist.
 
-    ```java
-    whitelist add <player>
-    ```
+## Turn the server whitelist on/off:
 
-- Remove a player from the whitelist:
+```java
+whitelist on
+whitelist off
+```
 
-    ```java
-    whitelist remove <player>
-    ```
+## List all players on the whitelist:
 
-- Turn the server whitelist on:
+```java
+whitelist list
+```
 
-    ```java
-    whitelist on
-    ```
+## Kick a player from the server:
 
-- Turn the server whitelist off:
+```java
+kick <player>
+```
 
-    ```java
-    whitelist off
-    ```
+## Teleport one player to another:
 
-- List all players on the whitelist:
+```java
+tp <player1> <player2>
+```
 
-    ```java
-    whitelist list
-    ```
+`<player1>` is the username of the player you want to teleport, and `<player2>` is the username of the player to whose location you want to teleport `<player1>`.
 
-- Kick a player from the server:
+## Teleport a player to the specified coordinates:
 
-    ```java
-    kick <player>
-    ```
+```java
+tp <player> <x> <y> <z>
+```
 
-- Teleport one player to another:
+`<player>` is the username of the player you want to teleport, and `<x> <y> <z>` are the coordinates to which you want to teleport the specified player.
 
-    ```java
-    tp <player1> <player2>
-    ```
-
-- Teleport a player to the specified coordinates:
-
-    ```java
-    tp <player> <x> <y> <z>
-    ```
 
 - Give a player a specific item and amount:
 
@@ -206,11 +196,23 @@ Here's the exhaustive list of all commands that can be used by the administrator
 playsound <sound> <player> <source> <x> <y> <z> <volume> <pitch> <minimumVolume>
 ```
 
+### Syntax
+
+- `<sound>` is the sound that will play (in your case, `minecraft:entity.creeper.primed`).
+- `<source>` is the source of the sound (`master`, `music`, `record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, `voice`).
+- `<player>` is the player who will hear the sound (in your case, `KITSUI_WEBSTER`).
+- `[<x> <y> <z>]` are the optional coordinates from where the sound will play (in your case, `-97 97 66`).
+- `[<volume>]` is the optional volume, which controls how loud the sound will be (in your case, `10`).
+- `[<pitch>]` is the optional pitch, which controls the tone of the sound (in your case, `1`).
+- `[<minimumVolume>]` is the optional minimum volume for players who are outside the normal audible sphere.
+
+### Source Parameter
+
 In the context of the Minecraft `playsound` command, the `master` refers to the source channel of the sound being played.
 
 Minecraft has various sound categories or "channels" that allow for more fine-tuned control over in-game audio settings. These categories can be individually adjusted by the player, meaning a player can make certain types of sounds louder or softer independent of other sounds.
 
-Here are the main sound categories:
+Here are the main sound categories (sources):
 
 1. `master`: This is the main volume controller. All sounds in the game fall under this category.
 2. `music`: This category is for the background music that plays while in the game.
