@@ -73,6 +73,7 @@ tp <player1> <player2>
 tp <player> <x> <y> <z>
 ```
 
+
 `<player>` is the username of the player you want to teleport, and `<x> <y> <z>` are the coordinates to which you want to teleport the specified player.
 
 
