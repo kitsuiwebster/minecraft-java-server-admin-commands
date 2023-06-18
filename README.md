@@ -2,7 +2,7 @@
 
 Here's the exhaustive list of all commands that can be used by the administrator of a Minecraft Server - Java Edition:
 
-## Grant and revoke a player operator status:
+## Grant and revoke a player operator status
 
 ```java
 op <player>
@@ -13,7 +13,7 @@ deop <player>
 
 `<player>` is the username of the player to whom you want to grant or revoke operator status.
 
-## Ban and unban a specific player:
+## Ban and unban a specific player
 
 ```java
 ban <player>
@@ -22,7 +22,7 @@ pardon <player>
 
 `<player>` is the username of the player that you want to ban or unban.
 
-## Ban or unban a specific IP address:
+## Ban or unban a specific IP address
 
 ```java
 ban-ip <address>
@@ -31,7 +31,7 @@ pardon-ip <address>
 
 `<address>` is the address of the player that you want to ban or unban.
 
-## Add or remove a player to/from the whitelist:
+## Add or remove a player to/from the whitelist
 
 ```java
 whitelist add <player>
@@ -40,26 +40,26 @@ whitelist remove <player>
 
 `<player>` is the username of the player that you to add to/from the whitelist.
 
-## Turn the server whitelist on/off:
+## Turn the server whitelist on/off
 
 ```java
 whitelist on
 whitelist off
 ```
 
-## List all players on the whitelist:
+## List all players on the whitelist
 
 ```java
 whitelist list
 ```
 
-## Kick a player from the server:
+## Kick a player from the server
 
 ```java
 kick <player>
 ```
 
-## Teleport one player to another:
+## Teleport one player to another
 
 ```java
 tp <player1> <player2>
@@ -67,75 +67,74 @@ tp <player1> <player2>
 
 `<player1>` is the username of the player you want to teleport, and `<player2>` is the username of the player to whose location you want to teleport `<player1>`.
 
-## Teleport a player to the specified coordinates:
+## Teleport a player to the specified coordinates
 
 ```java
 tp <player> <x> <y> <z>
 ```
 
-
 `<player>` is the username of the player you want to teleport, and `<x> <y> <z>` are the coordinates to which you want to teleport the specified player.
 
+## Give a player a specific item and amount
 
-- Give a player a specific item and amount:
+```java
+give <player> <item> [amount]
+```
 
-    ```java
-    give <player> <item> [amount]
-    ```
+## Kill a player
 
-- Kill a player:
+```java
+kill <player>
+```
 
-    ```java
-    kill <player>
-    ```
+## Change the time of day
 
-- Change the time of day:
+```java
+time set <value>
+```
 
-    ```java
-    time set <value>
-    ```
+## Change the weather
 
-- Change the weather:
+```java
+weather clear/rain/thunder
+```
 
-    ```java
-    weather clear/rain/thunder
-    ```
+## Change a player's game mode
 
-- Change a player's game mode:
+```java
+gamemode survival/creative/spectator/adventure <player>
+```
 
-    ```java
-    gamemode survival/creative/spectator/adventure <player>
-    ```
+## Give a player a specific amount of experience
 
-- Give a player a specific amount of experience:
+```java
+xp <amount> <player>
+```
 
-    ```java
-    xp <amount> <player>
-    ```
+## Broadcast a message to all players
 
-- Broadcast a message to all players:
+```java
+say <message>
+```
 
-    ```java
-    say <message>
-    ```
+## Stop the server
 
-- Stop the server:
+```java
+stop
+```
 
-    ```java
-    stop
-    ```
+## Force the server to write all pending changes to the disk
 
-- Force the server to write all pending changes to the disk:
+```java
+save-all
+```
 
-    ```java
-    save-all
-    ```
+## Disable and enable automatic saving
 
-- Disable automatic saving:
-
-    ```java
-    save-off
-    ```
+```java
+save-off
+save-on
+```
 
 - Enable automatic saving:
 
